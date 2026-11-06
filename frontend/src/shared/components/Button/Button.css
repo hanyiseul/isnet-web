@@ -1,0 +1,115 @@
+.button {    
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px var(--spaceXl);
+  font-size: var(--fsMd);
+  font-weight: var(--fwSbold);
+  line-height: var(--lhMd);
+  border: 1px solid var(--primary);
+  border-radius: var(--radiusXl);
+  transition: var(--transition);
+  box-sizing: border-box;
+}
+.buttonContent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spaceSm);
+}
+
+/* variants */
+.button.btn-primary {
+  color: var(--white);
+  background-color: var(--primary);
+}
+.button.btn-primary:not(:disabled):hover {
+  background-color: var(--primaryHover);
+}
+.button.btn-secondary {
+  color: var(--gray700);
+  border-color: var(--secondary);
+  background-color: var(--secondary);
+}
+.button.btn-secondary:not(:disabled):hover {
+  border-color: var(--gray200);
+  background-color: var(--gray200);
+}
+.button.btn-ghost {
+  color: var(--gray900);
+  border-color: transparent;
+  background-color: transparent;
+}
+.button.btn-ghost:not(:disabled):hover {
+  color: var(--primary);
+  border-color: transparent;
+  background-color: transparent;
+}
+.button.btn-outline {
+  color: var(--gray900);
+  border-color: var(--gray200);
+  background-color: var(--white);
+}
+.button.btn-outline:not(:disabled):hover {
+  color: var(--gray900);
+  border-color: var(--primary);
+  background-color: var(--white);
+}
+.button.btn-danger {
+  color: var(--white);
+  border-color: var(--destructive);
+  background-color: var(--destructive);
+}
+.button.btn-danger:not(:disabled):hover {
+  color: var(--white);
+  border-color: var(--destructiveHover);
+  background-color: var(--destructiveHover);
+}
+
+/* size */
+.button.btn-sm {
+  padding: 7px var(--spaceMd);
+  font-size: var(--fsXs);
+  line-height: var(--lhSm);
+}
+.button.btn-lg {
+  padding: 11px var(--space3xl);
+  font-size: var(--fsMd);
+}
+
+/* icon */
+.button .btnImg {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+.button.btnIcon {
+  width: 40px;
+  height: 40px;
+  padding: var(--spaceMd);
+}
+
+/* loading */
+.buttonContent.loading {
+  visibility: hidden;
+}
+.btnSpinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: btnSpin 0.7s linear infinite;
+}
+
+@keyframes btnSpin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

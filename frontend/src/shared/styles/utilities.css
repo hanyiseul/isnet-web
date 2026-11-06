@@ -1,0 +1,364 @@
+/* ========================================
+   Display
+======================================== */
+.block { display: block; }
+.inlineBlock { display: inline-block; }
+.inline { display: inline; }
+.flex { display: flex; }
+.inlineFlex { display: inline-flex; }
+.grid { display: grid; }
+.hidden { display: none; }
+
+/* ========================================
+   Flex
+======================================== */
+.flexRow { flex-direction: row; }
+.flexCol { flex-direction: column; }
+.flexWrap { flex-wrap: wrap; }
+.flexNoWrap { flex-wrap: nowrap; }
+.itemsStart { align-items: flex-start; }
+.itemsCenter { align-items: center; }
+.itemsEnd { align-items: flex-end; }
+.itemsStretch { align-items: stretch; }
+.itemsBaseline { align-items: baseline; }            /* ISNET 추가 · 제목 + '전체 보기' 정렬 */
+.justifyStart { justify-content: flex-start; }
+.justifyCenter { justify-content: center; }
+.justifyEnd { justify-content: flex-end; }
+.justifyBetween { justify-content: space-between; }
+.justifyAround { justify-content: space-around; }
+.flexCenter { display: flex; align-items: center; justify-content: center; }
+.flex1 { flex: 1 1 0%; min-width: 0; }               /* ISNET 추가 */
+.shrink0 { flex-shrink: 0; }                         /* ISNET 추가 */
+
+/* ========================================
+   Gap
+======================================== */
+.gap2xs { gap: var(--space2xs); }
+.gapXs { gap: var(--spaceXs); }
+.gapSm { gap: var(--spaceSm); }
+.gapMd { gap: var(--spaceMd); }
+.gapLg { gap: var(--spaceLg); }
+.gapXl { gap: var(--spaceXl); }
+.gap2xl { gap: var(--space2xl); }
+.gap3xl { gap: var(--space3xl); }
+.gap4xl { gap: var(--space4xl); }                    /* ISNET 추가 */
+.gap5xl { gap: var(--space5xl); }                    /* ISNET 추가 · 블록 간격 */
+.gap6xl { gap: var(--space6xl); }                    /* ISNET 추가 */
+
+/* ========================================
+   Grid
+======================================== */
+.grid2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+/* ISNET 추가 · 반응형 자동 그리드 (카드, 갤러리) */
+.gridAuto260 { grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); }
+.gridAuto320 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); }
+
+/* ========================================
+   Width & Height
+======================================== */
+.wFull { width: 100%; }
+.wAuto { width: auto; }
+.hFull { height: 100%; }
+.hAuto { height: auto; }
+.minW0 { min-width: 0; }
+.minH0 { min-height: 0; }
+.maxWFull { max-width: 100%; }
+.aspect43 { aspect-ratio: 4 / 3; }                   /* ISNET 추가 · 사진 칸 */
+
+/* ========================================
+   Typography
+======================================== */
+/* Font Family — ISNET 추가 */
+.fontSans { font-family: var(--fontSans); }
+.fontMono { font-family: var(--fontMono); }          /* 날짜, 번호 */
+.fontLogo { font-family: var(--fontLogo); }
+
+/* Font Size */
+.text2xs { font-size: var(--fs2xs); }
+.textXs { font-size: var(--fsXs); }
+.textSm { font-size: var(--fsSm); }
+.textMd { font-size: var(--fsMd); }
+.textLg { font-size: var(--fsLg); }
+.textXl { font-size: var(--fsXl); }
+.text2xl { font-size: var(--fs2xl); }
+.text3xl { font-size: var(--fs3xl); }
+.text4xl { font-size: var(--fs4xl); }
+
+/* Font Weight */
+.fontNormal { font-weight: var(--fwRg); }
+.fontMedium { font-weight: var(--fwMd); }
+.fontSemibold { font-weight: var(--fwSbold); }
+.fontBold { font-weight: var(--fwBold); }
+
+/* Line Height */
+.leadingSm { line-height: var(--lhSm); }
+.leadingMd { line-height: var(--lhMd); }
+.leadingLg { line-height: var(--lhLg); }
+
+/* Letter Spacing — ISNET 추가 */
+.trackingTight { letter-spacing: var(--trackingTight); }
+.trackingWider { letter-spacing: var(--trackingWider); }
+.trackingWidest { letter-spacing: var(--trackingWidest); }
+
+/* Text Align */
+.textLeft { text-align: left; }
+.textCenter { text-align: center; }
+.textRight { text-align: right; }
+
+/* Text Decoration */
+.underline { text-decoration: underline; }
+.noUnderline { text-decoration: none; }
+.truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.breakAll { word-break: break-all; }
+.keepAll { word-break: keep-all; }                   /* ISNET 추가 · 한글 단어 단위 줄바꿈 */
+.textPretty { text-wrap: pretty; }                   /* ISNET 추가 */
+.preLine { white-space: pre-line; }                  /* ISNET 추가 · 공지/문의 본문 */
+.nowrap { white-space: nowrap; }                     /* ISNET 추가 */
+.uppercase { text-transform: uppercase; }            /* ISNET 추가 */
+
+/* ========================================
+   Text Color
+======================================== */
+/* Base */
+.textWhite { color: var(--white); }
+.textBlack { color: var(--black); }
+.textForeground { color: var(--foreground); }
+.textMuted { color: var(--mutedForeground); }
+
+/* Brand */
+.textPrimary { color: var(--primary); }
+.textPrimaryLight,
+.textprimaryLight { color: var(--primaryLight); }    /* 오타 클래스는 호환용으로 유지 */
+.textPrimaryHover { color: var(--primaryHover); }
+.textPrimaryForeground { color: var(--primaryForeground); }
+.textBrandBlue { color: var(--brandBlue); }          /* ISNET 추가 */
+.textOnNavy100 { color: var(--onNavy100); }          /* ISNET 추가 */
+.textOnNavy200 { color: var(--onNavy200); }
+.textOnNavy300 { color: var(--onNavy300); }
+
+/* Gray */
+.textGray50 { color: var(--gray50); }
+.textGray100 { color: var(--gray100); }
+.textGray200 { color: var(--gray200); }
+.textGray300 { color: var(--gray300); }
+.textGray400 { color: var(--gray400); }
+.textGray500 { color: var(--gray500); }
+.textGray600 { color: var(--gray600); }
+.textGray700 { color: var(--gray700); }
+.textGray800 { color: var(--gray800); }
+.textGray900 { color: var(--gray900); }
+
+/* Semantic */
+.textSecondary { color: var(--secondaryForeground); }
+.textAccent { color: var(--accentForeground); }
+.textCard { color: var(--cardForeground); }
+.textPopover { color: var(--popoverForeground); }
+
+/* Status */
+.textSuccess { color: var(--success); }
+.textSuccessForeground { color: var(--successForeground); }
+.textDestructive { color: var(--destructive); }
+.textDestructiveForeground { color: var(--destructiveForeground); }
+.textWarning { color: var(--warning); }
+.textWarningForeground { color: var(--warningForeground); }
+.textInfo { color: var(--info); }
+.textInfoForeground { color: var(--infoForeground); }
+
+/* ========================================
+   Background Color
+======================================== */
+/* Base */
+.bgWhite { background-color: var(--white); }
+.bgBlack { background-color: var(--black); }
+.bgBackground { background-color: var(--background); }
+.bgForeground { background-color: var(--foreground); }
+
+/* Brand */
+.bgPrimary { background-color: var(--primary); }
+.bgPrimaryHover { background-color: var(--primaryHover); }
+.bgPrimaryLight { background-color: var(--primaryLight); }
+.bgBrandBlue { background-color: var(--brandBlue); }          /* ISNET 추가 */
+.bgBrandBlueLight { background-color: var(--brandBlueLight); }
+.bgPinned { background-color: rgba(30, 42, 68, 0.04); }       /* ISNET 추가 · 고정 공지 행 */
+
+
+/* onNavy */
+.bgonNavy { background-color: var(--onNavy); }
+.bgonNavy100 { background-color: var(--onNavy100); }
+.bgonNavy200 { background-color: var(--onNavy200); }
+.bgonNavy300 { background-color: var(--onNavy300); }
+
+/* Gray */
+.bgGray50 { background-color: var(--gray50); }
+.bgGray100 { background-color: var(--gray100); }
+.bgGray200 { background-color: var(--gray200); }
+.bgGray300 { background-color: var(--gray300); }
+.bgGray400 { background-color: var(--gray400); }
+.bgGray500 { background-color: var(--gray500); }
+.bgGray600 { background-color: var(--gray600); }
+.bgGray700 { background-color: var(--gray700); }
+.bgGray800 { background-color: var(--gray800); }
+.bgGray900 { background-color: var(--gray900); }
+
+/* Semantic */
+.bgCard { background-color: var(--card); }
+.bgPopover { background-color: var(--popover); }
+.bgSecondary { background-color: var(--secondary); }
+.bgMuted { background-color: var(--muted); }
+.bgAccent { background-color: var(--accent); }
+.bgInput { background-color: var(--inputBackground); }
+.bgPlaceholder { background: repeating-linear-gradient(135deg, #e6e8ec 0 8px, #eef0f3 8px 16px); } /* ISNET 추가 · 사진 자리 */
+.bgOverlay { background-color: rgba(15, 20, 32, 0.92); }      /* ISNET 추가 · 라이트박스 */
+
+/* Status */
+.bgSuccess { background-color: var(--success); }
+.bgSuccessLight { background-color: var(--successLight); }
+.bgDestructive { background-color: var(--destructive); }
+.bgDestructiveLight { background-color: var(--destructiveLight); }
+.bgWarning { background-color: var(--warning); }
+.bgWarningLight { background-color: var(--warningLight); }
+.bgInfo { background-color: var(--info); }
+.bgInfoLight { background-color: var(--infoLight); }
+
+/* ========================================
+   Border Color
+======================================== */
+.borderTransparent { border-color: transparent; }
+.borderDefault { border-color: var(--border); }
+.borderPrimary { border-color: var(--primary); }
+.borderInk { border-color: var(--gray900); }         /* ISNET 추가 */
+.borderGray100 { border-color: var(--gray100); }
+.borderGray200 { border-color: var(--gray200); }
+.borderGray300 { border-color: var(--gray300); }
+.borderGray400 { border-color: var(--gray400); }
+.borderSuccess { border-color: var(--success); }
+.borderDestructive { border-color: var(--destructive); }
+.borderWarning { border-color: var(--warning); }
+.borderInfo { border-color: var(--info); }
+
+/* ========================================
+   Margin
+======================================== */
+.m0 { margin: 0; }
+.mxAuto { margin-inline: auto; }                     /* ISNET 추가 */
+.mtAuto { margin-top: auto; }
+.mtSm { margin-top: var(--spaceSm); }
+.mtMd { margin-top: var(--spaceMd); }
+.mtLg { margin-top: var(--spaceLg); }
+.mtXl { margin-top: var(--spaceXl); }
+.mt2xl { margin-top: var(--space2xl); }
+.mt3xl { margin-top: var(--space3xl); }              /* ISNET 추가 */
+.mt4xl { margin-top: var(--space4xl); }              /* ISNET 추가 */
+.mt5xl { margin-top: var(--space5xl); }              /* ISNET 추가 */
+.mbSm { margin-bottom: var(--spaceSm); }
+.mbMd { margin-bottom: var(--spaceMd); }
+.mbLg { margin-bottom: var(--spaceLg); }
+.mbXl { margin-bottom: var(--spaceXl); }
+
+/* ========================================
+   Padding
+======================================== */
+.p0 { padding: 0; }
+.pSm { padding: var(--spaceSm); }
+.pMd { padding: var(--spaceMd); }
+.pLg { padding: var(--spaceLg); }
+.pXl { padding: var(--spaceXl); }
+.p2xl { padding: var(--space2xl); }
+.p3xl { padding: var(--space3xl); }                  /* ISNET 추가 · 카드 */
+.pxSm { padding-inline: var(--spaceSm); }
+.pxMd { padding-inline: var(--spaceMd); }
+.pxLg { padding-inline: var(--spaceLg); }
+.pySm { padding-block: var(--spaceSm); }
+.pyMd { padding-block: var(--spaceMd); }
+.pyLg { padding-block: var(--spaceLg); }
+.pyXl { padding-block: var(--spaceXl); }             /* ISNET 추가 · 목록 행 */
+.py2xl { padding-block: var(--space2xl); }           /* ISNET 추가 */
+
+/* ========================================
+   Border
+======================================== */
+.border { border: 1px solid var(--border); }
+.border0 { border: 0; }
+.borderTop { border-top: 1px solid var(--border); }
+.borderBottom { border-bottom: 1px solid var(--border); }
+.borderTopInk { border-top: 1px solid var(--gray900); }       /* ISNET 추가 · 목록 시작 라인 */
+.borderDashed { border: 1px dashed var(--gray400); }          /* ISNET 추가 · 업로드 */
+
+/* ========================================
+   Border Radius
+======================================== */
+.roundedXs { border-radius: var(--radiusXs); }
+.roundedSm { border-radius: var(--radiusSm); }
+.roundedMd { border-radius: var(--radiusMd); }
+.roundedLg { border-radius: var(--radiusLg); }
+.roundedXl { border-radius: var(--radiusXl); }
+.rounded2xl { border-radius: var(--radius2xl); }
+.roundedFull { border-radius: var(--radiusFull); }
+
+/* ========================================
+   Shadow
+======================================== */
+.shadowSm { box-shadow: var(--shadowSm); }
+.shadowMd { box-shadow: var(--shadowMd); }
+.shadowLg { box-shadow: var(--shadowLg); }
+.shadowXl { box-shadow: var(--shadowXl); }
+
+/* ========================================
+   Position
+======================================== */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.sticky { position: sticky; }
+.inset0 { inset: 0; }                                /* ISNET 추가 */
+.top0 { top: 0; }                                    /* ISNET 추가 */
+
+/* ========================================
+   Overflow
+======================================== */
+.overflowHidden { overflow: hidden; }
+.overflowAuto { overflow: auto; }
+.overflowXAuto { overflow-x: auto; }
+.overflowYAuto { overflow-y: auto; }
+
+/* ========================================
+   Opacity
+======================================== */
+.opacity0 { opacity: 0; }
+.opacity50 { opacity: 0.5; }
+.opacity100 { opacity: 1; }
+
+/* ========================================
+   Cursor
+======================================== */
+.cursorPointer { cursor: pointer; }
+.cursorNotAllowed { cursor: not-allowed; }
+
+/* ========================================
+   Transition
+======================================== */
+.transition { transition: all var(--transition); }
+.transitionFast { transition: all var(--transitionFast); }
+.transitionSlow { transition: all var(--transitionSlow); }
+
+/* ========================================
+   ISNET 추가 · Responsive helpers
+   모바일 < 760px · 상단 메뉴 ≥ 1080px
+======================================== */
+@media (max-width: 759px) {
+  .mobileHidden { display: none !important; }
+  .mobileCol { flex-direction: column; }
+  .mobileGrid1 { grid-template-columns: minmax(0, 1fr); }
+  .mobileTextLeft { text-align: left; }
+}
+@media (min-width: 760px) {
+  .desktopHidden { display: none !important; }
+}
+@media (max-width: 1079px) {
+  .navCollapsed { display: none !important; }       /* 상단 메뉴 숨김 → 햄버거 */
+}
+@media (min-width: 1080px) {
+  .navToggle { display: none !important; }          /* 햄버거 버튼 숨김 */
+}
