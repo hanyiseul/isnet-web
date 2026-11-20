@@ -1,4 +1,10 @@
 /* Reset */
+:root {
+  --fontSans: 'DM Sans', 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  --fontKr: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  --fontMono: 'DM Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  --fontLogo: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
+}
 
 *,
 *::before,
@@ -9,19 +15,22 @@
 }
 
 /* HTML / Body */
-html {
+
+html, body {
+  font-family: var(--fontSans);
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  word-break: keep-all;
 }
 
 body {
   min-height: 100vh;
   line-height: 1.5;
-  font-family: var(--font-family, sans-serif);
+  font-family: var(--fontSans);
   color: var(--color-text, #111827);
   background-color: var(--color-background, #ffffff);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Typography */
@@ -91,7 +100,7 @@ input:focus-visible,
 select:focus-visible,
 button:focus-visible,
 a:focus-visible {
-  border: 1px solid var(--purple-500);
+  border: 1px solid var(--primary);
 }
 
 textarea {
